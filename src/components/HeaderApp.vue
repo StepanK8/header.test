@@ -4,7 +4,8 @@ import { useRouter, useRoute } from 'vue-router'
 
 import BellApp from '@/components/BellApp.vue'
 import HamburgerButton from './HamburgerButton.vue';
-const router = useRouter()
+
+const router = useRouter() //я подумал, что будет странно использовать vuex/pinia для хранения роутов, когда для этого есть vue-router)
 
 const isOpenMenu = ref<Boolean>(false)
 
