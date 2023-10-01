@@ -1,0 +1,92 @@
+
+$mediaQuery1: 1150px;
+$mediaQuery2: 768px;
+
+
+:root{
+    --Dark-Gray: #1F2229;
+    --Light-Gray: #EDEDED;
+    --gray: #7C8792;
+    --background: #F5F5F5;
+    --gray-placeholder: #7C8792;
+    --black: #1F2229;
+    --darkGrayHover: #282828;
+    --Primary-Border: #4D4D4D;
+    --Seondary-BG: #262626;
+    --Primary-Red: #FA7272;
+    --Primary-Red-Hover: #e14343;
+    --Skeleton: linear-gradient(90deg, #3C3C3C 0%, #444 51.04%, #333 100%);
+
+    --height-header: 40px;
+
+    --mainFont: 'ArialNova';
+    --mediaQuery1: 1351px;
+    --heightImageWrap: 440px;
+
+    --M-Text-Size: 14px;
+
+
+    --width: 1116px;
+    
+}
+
+@media screen and (max-width: $mediaQuery1) {
+    *{  
+    } 
+}
+@media screen and (max-width: $mediaQuery2) {
+    *{
+        --maxW: 95vw;
+        --heightImageWrap: 45vw;
+        --middle: 4vw;
+
+        --height-header: 45px;
+    }
+}
+// body{
+//     background: var(--background);
+// }
+
+@mixin baseText{
+    font-size: var(--M-Text-Size);
+    font-family: "tele2";
+}
+@mixin grayBoldText{
+    @include baseText;
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@mixin grayText{
+    @include baseText;
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@mixin card{
+    border: 1px solid var(--Primary-Border);
+    border-radius: 12px;
+    background: var(--Seondary-BG);
+}
+
+@mixin button{
+    background: var(--Primary-Red);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    transition: .2s;
+    &:hover{
+        background: var(--Primary-Red-Hover);
+        cursor: pointer;
+    }
+}
+
+
+
